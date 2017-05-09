@@ -19,6 +19,6 @@ def maxmin(vars):
         y.append([z,m])
 
     return y
-print(maxmin([1,2,3,4]))
+
             
 
