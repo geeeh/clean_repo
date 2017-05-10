@@ -26,5 +26,5 @@ class My_math():
                 return p        
 
 
-stf= My_math()
-print(stf.get_prime_numbers(1000))                  
+# stf= My_math()
+# print(stf.get_prime_numbers(1000))                  
