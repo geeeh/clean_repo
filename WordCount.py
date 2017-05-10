@@ -14,4 +14,4 @@ def word_counter(y):
     
         
 
-print(word_counter("ho many many Many"))
+# print(word_counter("ho many many Many"))
