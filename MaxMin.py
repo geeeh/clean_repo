@@ -23,6 +23,7 @@ def find_max_min(vars):
             return v
 
     return y
+# # print(find_max_min([1,2,3,9,6]))
 # import unittest
 
 # class MaxMinTest(unittest.TestCase):
