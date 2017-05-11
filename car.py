@@ -1,26 +1,41 @@
 
-class Vehicle(object):
+class Car(object):
             
-    def __init__(self, default):
-        self.type=default
-        self.model=default
-        self.name=default
-        num_of_wheels=4
-
-    def __init__(self, c, d, *args, **kwargs):
-        
-    def __init__(self, c, d, *args, **kwargs):
+    def __init__(self, *args):
+        if len(args)>2:
+             if args[2]=="trailer":
+                 self.saloon=False
+        else:
+            self.saloon=True       
+        if len(args) <2:
+            self.model="GM"
+        else:
+            self.model=args[1]
+        if len(args) ==0:
+            self.name="General"
+        else:
+            self.name=args[0]    
+        self.speed=0
+        if self.name=="Porshe" or self.name=="Koenigsegg":
+            self.num_of_doors=2
+        else:
+            self.num_of_doors=4
     
-
-    def settype(self, mytype):
-        self.type=mytype
-
-    def setmodel(self, mymodel):
-        self.model=mymodel
-
-    def setname(self, myname):
-        self.name=myname
-
+        if not self.saloon:
+            self.num_of_wheels=8
+        else:
+            self.num_of_wheels=4
+        
+        
+    def is_saloon(self):
+        
+        return self
+        
+    def drive(self, new_speed):
+        self.speed=new_speed
+        return self
+man=Car()
+print(man.drive(77).speed)
 
 
 import unittest
@@ -98,6 +113,7 @@ class CarClassTest(unittest.TestCase):
                              [moving_man_instance, moving_man_type, moving_man.speed],
                              msg='The car drive function should return the instance of the Car class')
 
+unittest.main()
 
 
 
