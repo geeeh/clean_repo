@@ -21,16 +21,16 @@ class BinarySearch(list):
 
         while x <= y and not z:
             count +=1            
-            mid = (x+y)//2
-            if self[mid-1] == val:                
-                index = mid-1
+            index = (x+y)//2-1
+            if self[index] == val:                
+                
                 z = True
 
             else:                
-                if val < self[mid]:                                       
-                   y = mid
+                if val < self[index]:                                       
+                   y = index+1
                 else:                    
-                    x = mid
+                    x = index+1
 
         if z==False:
             index = -1
@@ -40,7 +40,7 @@ class BinarySearch(list):
         return {'count': count, 'index':index}
 
 b = BinarySearch(20,1)
-print(b.search(5))
+print(b.search(1))
 
 # import unittest
 # class ListComprehensionTest(unittest.TestCase):
