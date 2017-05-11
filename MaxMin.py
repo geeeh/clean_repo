@@ -1,26 +1,3 @@
-def maxmin(vars):
-    y=[]
-    m=vars[0]
-    z=vars[0]
-    if not isinstance(vars,list):
-        return "only lists allowed"
-
-    else:
-        for x in vars:
-            if x<z:
-                z=x
-                
-            elif x>m:
-                m=x
-
-            else:
-                pass
-
-        y.append([z,m])
-
-    return y
-
-            
 
 def find_max_min(vars):
     y=[]
@@ -47,6 +24,8 @@ def find_max_min(vars):
             return v
 
     return y
+
+print(find_max_min([1,2,5,3]))
 # import unittest
 
 # class MaxMinTest(unittest.TestCase):
