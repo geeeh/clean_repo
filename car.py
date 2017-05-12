@@ -32,8 +32,8 @@ class Car(object):
         return self
         
     def drive(self, new_speed):
-        topspeed={'Mercedes':1000,'MAN':77}
-        self.speed=topspeed[self.name]
+        topspeed={'Mercedes':10003,'MAN':84}
+        self.speed=topspeed[self.name]-new_speed
         return self
 man=Car('MAN')
 print(man.drive(77).speed)
