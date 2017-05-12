@@ -32,11 +32,11 @@ class Car(object):
         return self
         
     def drive(self, new_speed):
-        topspeed={'Mercedes':10003,'MAN':84}
+        topspeed={'Mercedes':1003,'MAN':84}
         self.speed=topspeed[self.name]-new_speed
         return self
-man=Car('MAN')
-print(man.drive(77).speed)
+man=Car('Mercedes')
+print(man.drive(3).speed)
 
 
 # import unittest
